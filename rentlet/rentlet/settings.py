@@ -10,8 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ALLOWED_HOSTS = ['rentlet.herokuapp.com']
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -26,7 +25,6 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -38,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rentlet_user',
     'item',
+    'jsonutil',
 )
 
 MIDDLEWARE_CLASSES = (

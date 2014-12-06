@@ -1,7 +1,9 @@
-Django==1.7
+Django==1.7.1
 dj-database-url==0.3.0
-dj-static==0.0.6
+flake8==2.2.5
 gunicorn==19.1.1
-psycopg2==2.5.1
-static==0.4
+mccabe==0.2.1
+pep8==1.5.7
+pyflakes==0.8.1
+virtualenv==1.11.6
 wsgiref==0.1.2

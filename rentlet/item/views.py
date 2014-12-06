@@ -8,7 +8,6 @@ from django.shortcuts import render
 from item.forms import ItemCreateForm
 from item.models import Item
 from jsonutil import json_success, json_fail
-from rentlet_user.models import RentletUser
 
 
 def item_list(request):
