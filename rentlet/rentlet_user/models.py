@@ -1,10 +1,11 @@
+from django.conf import settings
 from django.db import models
 
 # Create your models here.
 
+
 class RentletUser(models.Model):
-    username = models.CharField(max_length=200)
-    password = models.CharField(max_length=10)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL)
 
     def __unicode__(self):
         return self.username

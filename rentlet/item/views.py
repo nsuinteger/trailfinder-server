@@ -32,6 +32,8 @@ def item_create(request):
         form = ItemCreateForm(request.POST)
         if form.isValid():
             model_instance = form.save(commit=False)
+            model_instance.create_by_id = request.user.id
+
 
     except KeyError:
         return json_fail("item create fail")

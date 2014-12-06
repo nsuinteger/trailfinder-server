@@ -15,12 +15,11 @@ def isAuthenticate(username, password):
     return False
 
 
-def user_login(request):
-    return json_success(request, "login success")
-    try:
-        username = request.POST['username']
-        password = request.POST['password']
-        if (isAuthenticate(username, password)):
-            return json_success(request, "login successfully")
-    except KeyError:
-        return json_fail(request, "login fail")
+# def user_login(request):
+#     try:
+#         username = request.POST['username']
+#         password = request.POST['password']
+#         if (isAuthenticate(username, password)):
+#             return json_success(request, "login successfully")
+#     except KeyError:
+#         return json_fail(request, "login fail")
