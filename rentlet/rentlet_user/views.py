@@ -1,3 +1,4 @@
+from django.contrib.auth import authenticate
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
 
@@ -15,11 +16,18 @@ def isAuthenticate(username, password):
     return False
 
 
-# def user_login(request):
-#     try:
-#         username = request.POST['username']
-#         password = request.POST['password']
-#         if (isAuthenticate(username, password)):
-#             return json_success(request, "login successfully")
-#     except KeyError:
-#         return json_fail(request, "login fail")
+def user_login(request):
+    return json_success(request, "login successful")
+
+    if request.user.is_authenticated():
+        #user is already login
+        return json_success("login success")
+    try:
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = authenticate()
+        if (isAuthenticate(username, password)):
+            return json_success(request, "login successfully")
+    except KeyError:
+        return json_fail(request, "login fail")

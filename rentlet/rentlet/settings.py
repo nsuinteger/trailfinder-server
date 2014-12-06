@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ALLOWED_HOSTS = ['https://frozen-mesa-5439.herokuapp.com']
+ALLOWED_HOSTS = ['rentlet.herokuapp.com']
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +25,6 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['rentlet.herokuapp.com']
 
 
 # Application definition

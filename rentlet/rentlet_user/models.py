@@ -6,7 +6,6 @@ from django.db import models
 
 class RentletUser(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
-
     def __unicode__(self):
-        return self.username
+        return self.user.username
 
