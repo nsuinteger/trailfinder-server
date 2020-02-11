@@ -1,4 +1,4 @@
-Django==1.7.1
+Django==1.11.28
 dj-database-url==0.3.0
 flake8==2.2.5
 gunicorn==19.1.1
